@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:shoes_ecommerce_app/screens/home_screen.dart';
 import 'package:shoes_ecommerce_app/widgets/Best_Sellers_widgets/Best_item.dart';
+import 'package:shoes_ecommerce_app/widgets/Best_Sellers_widgets/Filter.dart';
 
 class BestSellersScreen extends StatelessWidget {
-  const BestSellersScreen({super.key});
+  BestSellersScreen({super.key});
+
+  GlobalKey<ScaffoldState> ScaffoldKey = GlobalKey();
 
   final Color backgroundColor = const Color(0xffF8F9FA);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: ScaffoldKey,
         appBar: AppBar(
           backgroundColor: backgroundColor,
           title: Row(
@@ -20,7 +24,7 @@ class BestSellersScreen extends StatelessWidget {
                 'Best Sellers',
                 style: TextStyle(fontWeight: FontWeight.w500),
               ),
-              _buildFavoriteIcon(),
+              _buildFilterIcon(),
             ],
           ),
         ),
@@ -119,7 +123,7 @@ class BestSellersScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildFavoriteIcon() {
+  Widget _buildFilterIcon() {
     return Row(
       children: [
         Container(
@@ -130,7 +134,11 @@ class BestSellersScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldKey.currentState!.showBottomSheet(
+                (context) => Filter(),
+              );
+            },
             icon: const Icon(Icons.filter_list_alt),
             iconSize: 23,
           ),

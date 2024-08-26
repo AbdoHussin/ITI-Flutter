@@ -7,8 +7,7 @@ import 'package:shoes_ecommerce_app/screens/home_screen.dart';
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
 
-    final Color backgroundColor = const Color(0xffF8F9FA);
-
+  final Color backgroundColor = const Color(0xffF8F9FA);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,6 @@ class FavoriteScreen extends StatelessWidget {
         ),
       ),
       body: BlocBuilder<FavoriteBloc, FavoriteState>(
-        
         builder: (context, state) {
           if (state is FavoriteLoadedState) {
             return _buildFavoriteList(state.favoriteItems);

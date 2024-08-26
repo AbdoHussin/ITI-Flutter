@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shoes_ecommerce_app/screens/Notification_screen.dart';
 import 'package:shoes_ecommerce_app/screens/favorite_screen.dart';
+import 'package:shoes_ecommerce_app/screens/profile_screen.dart';
+import 'package:shoes_ecommerce_app/screens/shopping_cart_page.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({super.key});
@@ -19,6 +21,7 @@ class BottomBar extends StatelessWidget {
             ),
           ),
           height: 60,
+          width: 380,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -66,7 +69,14 @@ class BottomBar extends StatelessWidget {
                       iconSize: 28,
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ProfileScreen(),
+                          ),
+                        );
+                      },
                       icon: const Icon(Icons.person_2_outlined),
                       iconSize: 28,
                     ),
@@ -96,9 +106,17 @@ class BottomBar extends StatelessWidget {
                     color: const Color(0xff5B9EE1),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: const Center(
-                    child: Icon(
-                      Icons.shopping_bag_outlined,
+                  child:  Center(
+                    child: IconButton(
+                      onPressed: (){
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ShoppingCartPage(),
+                          ),
+                        );
+                      },
+                      icon: Icon(Icons.shopping_bag_outlined),
                       color: Colors.white,
                     ),
                   ),

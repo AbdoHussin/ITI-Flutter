@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:shoes_ecommerce_app/screens/Login&SignUp/signup.dart';
 import 'package:shoes_ecommerce_app/screens/home_screen.dart';

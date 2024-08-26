@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shoes_ecommerce_app/screens/shopping_cart_page.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -8,9 +9,15 @@ class HomeAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.grid_view_rounded),
+        Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: const Icon(Icons.grid_view_rounded),
+            );
+          },
         ),
         const Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +47,11 @@ class HomeAppBar extends StatelessWidget {
           ],
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => ShoppingCartPage(),
+            ));
+          },
           icon: const Icon(Icons.shopping_bag_outlined),
         ),
       ],

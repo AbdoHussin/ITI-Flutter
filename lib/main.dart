@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:shoes_ecommerce_app/components/FavoriteBloc.dart';
+import 'package:shoes_ecommerce_app/screens/Login&SignUp/Login.dart';
 import 'package:shoes_ecommerce_app/screens/favorite_screen.dart';
 import 'package:shoes_ecommerce_app/screens/home_screen.dart';
 import 'package:shoes_ecommerce_app/screens/splash_screen.dart';
@@ -42,6 +43,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         'home': (context) =>const HomeScreen(),
         'favorite': (context) =>const FavoriteScreen(),
+        'Login': (context) =>const Login(),
       },
       debugShowCheckedModeBanner: false,
       title: 'Shoes Ecommerce_App',

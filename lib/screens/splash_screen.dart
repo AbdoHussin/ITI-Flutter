@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shoes_ecommerce_app/screens/onBoarding_screen.dart';
 import 'package:shoes_ecommerce_app/widgets/onBoarding_widgets/OnboardingBody.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(seconds: 5), () {
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => const OnboardingBody(),
+        builder: (context) => const OnboardingScreen(),
       ));
     });
   }

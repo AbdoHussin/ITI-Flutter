@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shoes_ecommerce_app/components/FavoriteBloc.dart';
+import 'package:shoes_ecommerce_app/screens/Checkout.dart';
+import 'package:shoes_ecommerce_app/screens/Notification_screen.dart';
+import 'package:shoes_ecommerce_app/screens/favorite_screen.dart';
+import 'package:shoes_ecommerce_app/screens/profile_screen.dart';
+import 'package:shoes_ecommerce_app/screens/shopping_cart_page.dart';
 import 'package:shoes_ecommerce_app/widgets/home_widgets/BigHomeItem.dart';
 
 import 'package:shoes_ecommerce_app/widgets/home_widgets/BottomBar.dart';
@@ -57,76 +62,188 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 25),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'Profile',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.home_outlined,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'Home Page',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.shopping_bag_outlined,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'My Cart',
-                      style: TextStyle(color: Colors.white),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Profile',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.favorite_border_sharp,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'Favorite',
-                      style: TextStyle(color: Colors.white),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomeScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.home_outlined,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Home Page',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.local_shipping_outlined,
-                      color: Colors.white,
-                    ),
-                    title: Text(
-                      'Orders',
-                      style: TextStyle(color: Colors.white),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShoppingCartPage(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.shopping_bag_outlined,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'My Cart',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.notifications,
-                      color: Colors.white,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FavoriteScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.favorite_border_sharp,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Favorite',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
-                    title: Text(
-                      'Notifications',
-                      style: TextStyle(color: Colors.white),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Checkout(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.local_shipping_outlined,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Orders',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const NotificationScreen(),
+                        ),
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.notifications,
+                        color: Colors.white,
+                      ),
+                      title: Text(
+                        'Notifications',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   const Divider(color: Colors.grey, thickness: 2),
                   const SizedBox(height: 25),
-                  const ListTile(
-                    leading: Icon(
-                      Icons.exit_to_app_rounded,
-                      color: Colors.red,
-                    ),
-                    title: Text(
-                      'sign Out',
-                      style: TextStyle(color: Colors.red),
+                  InkWell(
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            title: const Text(
+                              'Confirm Exit',
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            content: const Text(
+                              'Are you sure you want to sign out?',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text(
+                                  'Cancel',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.red,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context)
+                                      .pushReplacementNamed('Login');
+                                },
+                                child: const Text(
+                                  'Sign Out',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: const ListTile(
+                      leading: Icon(
+                        Icons.exit_to_app_rounded,
+                        color: Colors.red,
+                      ),
+                      title: Text(
+                        'Sign Out',
+                        style: TextStyle(color: Colors.red),
+                      ),
                     ),
                   ),
                 ],

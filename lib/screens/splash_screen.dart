@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shoes_ecommerce_app/screens/home_screen.dart';
+import 'package:shoes_ecommerce_app/widgets/onBoarding_widgets/OnboardingBody.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,8 +16,9 @@ class _SplashScreenState extends State<SplashScreen>
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
     Future.delayed(const Duration(seconds: 5), () {
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => HomeScreen(),
+        builder: (context) => const OnboardingBody(),
       ));
     });
   }
@@ -32,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Image.asset(

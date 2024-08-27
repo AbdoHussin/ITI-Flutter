@@ -4,7 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:shoes_ecommerce_app/components/FavoriteBloc.dart';
 import 'package:shoes_ecommerce_app/screens/favorite_screen.dart';
 import 'package:shoes_ecommerce_app/screens/home_screen.dart';
-import 'package:shoes_ecommerce_app/screens/onBoarding_screen.dart';
+import 'package:shoes_ecommerce_app/screens/splash_screen.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       },
       debugShowCheckedModeBanner: false,
       title: 'Shoes Ecommerce_App',
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

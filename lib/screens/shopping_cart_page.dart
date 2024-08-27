@@ -9,9 +9,16 @@ class ShoppingCartPage extends StatefulWidget {
 
 class _ShoppingCartPageState extends State<ShoppingCartPage> {
   final Color backgroundColor = const Color(0xffF8F9FA);
-  List<int> quantities = [1, 1, 1];
 
-  final List<double> prices = [64.95, 64.95, 64.95];
+  final List<String> itemNames = [
+    'Nike Air Max',
+    'Nike Air Max 200',
+    'Nike Air Max'
+  ];
+  final List<String> itemSizes = ['L', 'XL', 'XXL'];
+
+  List<int> quantities = [1, 1, 1];
+  final List<double> prices = [64.95, 164.95, 200.95];
 
   double get totalCost {
     double total = 0;
@@ -33,7 +40,8 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon:
+              const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -49,8 +57,12 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
             child: ListView.builder(
               itemCount: quantities.length,
               itemBuilder: (context, index) {
-                return _buildCartItem('Item $index', '\$${prices[index]}',
-                    'assets/images/Details/small${index + 1}.png', 'XL', index);
+                return _buildCartItem(
+                    itemNames[index],
+                    '\$${prices[index]}',
+                    'assets/images/Details/small${index + 1}.png',
+                    itemSizes[index],
+                    index);
               },
             ),
           ),
@@ -62,8 +74,8 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
         child: ElevatedButton(
           onPressed: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) => const Checkout(),
-          ));
+              builder: (context) => const Checkout(),
+            ));
           },
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xff5B9EE1),
@@ -99,7 +111,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
               Text(
                 name,
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
@@ -158,6 +170,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
               setState(() {
                 quantities.removeAt(index);
                 prices.removeAt(index);
+                itemNames.removeAt(index);
               });
             },
           ),

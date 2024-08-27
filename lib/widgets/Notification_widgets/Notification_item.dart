@@ -19,7 +19,7 @@ class NotificationItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       width: double.infinity,
       height: 130,
       decoration: BoxDecoration(
@@ -40,11 +40,11 @@ class NotificationItem extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'We Have New Products With Offers',
                   style: TextStyle(
                     color: Color(0xff1A2530),
@@ -54,21 +54,21 @@ class NotificationItem extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   children: [
                     Text(
                       newPrice,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 17,
                         color: Color(0xff1A2530),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Text(
                       oldPrice,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 17,
                         color: Color(0xff707B81),
@@ -80,25 +80,25 @@ class NotificationItem extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Text(
                 time,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 17,
                   color: Color(0xff707B81),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               if (showDot)
                 Container(
                   width: 10,
                   height: 10,
                   decoration: BoxDecoration(
-                    color: Color(0xff5B9EE1),
+                    color: const Color(0xff5B9EE1),
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),

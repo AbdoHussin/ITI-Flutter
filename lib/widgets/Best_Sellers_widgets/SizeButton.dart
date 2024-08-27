@@ -19,7 +19,7 @@ class SizeButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         backgroundColor: isSelected ? Colors.blue : Colors.white,
       ),
       child: Text(

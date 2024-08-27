@@ -13,7 +13,6 @@ class GenderButton extends StatelessWidget {
         padding: const EdgeInsets.only(right: 8.0),
         child: ElevatedButton(
           onPressed: () {
-            // Handle gender selection
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: isSelected ? Colors.white : Colors.black,
@@ -21,7 +20,7 @@ class GenderButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.symmetric(vertical: 12),
+            padding:const EdgeInsets.symmetric(vertical: 12),
           ),
           child: Text(text),
         ),

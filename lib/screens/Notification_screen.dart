@@ -95,9 +95,11 @@ class NotificationScreen extends StatelessWidget {
       ),
       child: IconButton(
         onPressed: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ));
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => const HomeScreen(),
+            ),
+          );
         },
         icon: const Icon(Icons.arrow_back_ios_new),
         iconSize: 20,

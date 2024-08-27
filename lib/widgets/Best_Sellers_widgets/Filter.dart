@@ -36,8 +36,6 @@ class _FilterState extends State<Filter> {
               ],
             ),
             const SizedBox(height: 8),
-
-            // Size Selection
             const Text(
               'Size',
               style: TextStyle(
@@ -57,8 +55,6 @@ class _FilterState extends State<Filter> {
               ],
             ),
             const SizedBox(height: 8),
-
-            // Price Slider
             const Text(
               'Price',
               style: TextStyle(
@@ -85,7 +81,6 @@ class _FilterState extends State<Filter> {
               ),
             ),
             const SizedBox(height: 8),
-
             Center(
               child: ElevatedButton(
                 onPressed: () {},

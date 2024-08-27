@@ -106,9 +106,9 @@ class BottomBar extends StatelessWidget {
                     color: const Color(0xff5B9EE1),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child:  Center(
+                  child: Center(
                     child: IconButton(
-                      onPressed: (){
+                      onPressed: () {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
@@ -116,7 +116,7 @@ class BottomBar extends StatelessWidget {
                           ),
                         );
                       },
-                      icon: Icon(Icons.shopping_bag_outlined),
+                      icon: const Icon(Icons.shopping_bag_outlined),
                       color: Colors.white,
                     ),
                   ),

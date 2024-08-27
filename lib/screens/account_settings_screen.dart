@@ -114,9 +114,7 @@ class _AccountSettingsScreenState extends State<AccountSettingsScreen> {
         ),
       ),
       trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
-      onTap: () {
-        // Handle navigation to respective screen
-      },
+      onTap: () {},
     );
   }
 

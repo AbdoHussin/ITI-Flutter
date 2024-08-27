@@ -16,21 +16,23 @@ class ProfileScreen extends StatelessWidget {
         leading: _buildBackButton(context),
         title: const Text(
           'Profile',
-          style:
-              TextStyle(fontWeight: FontWeight.w500, color: Color(0xff1A2530)),
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Color(0xff1A2530),
+          ),
         ),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const AccountSettingsScreen(),
-                          ),
-                        );
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AccountSettingsScreen(),
+                ),
+              );
             },
-            icon: Icon(Icons.edit),
-            color: Color(0xff5B9EE1),
+            icon: const Icon(Icons.edit),
+            color: const Color(0xff5B9EE1),
           ),
         ],
       ),
@@ -60,10 +62,11 @@ class ProfileScreen extends StatelessWidget {
                       width: 40,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Color(0xff5B9EE1),
-                        border: Border.all(width: 2, color: Color(0xff5B9EE1)),
+                        color: const Color(0xff5B9EE1),
+                        border: Border.all(
+                            width: 2, color: const Color(0xff5B9EE1)),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.camera_alt,
                         color: Colors.white,
                       ),
@@ -73,8 +76,8 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Center(
-              child: const Text(
+            const Center(
+              child: Text(
                 'Salah Fathy',
                 style: TextStyle(
                   color: Color(0xff1A2530),
@@ -109,7 +112,10 @@ class ProfileScreen extends StatelessWidget {
       child: IconButton(
         onPressed: () {
           Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const HomeScreen()));
+            MaterialPageRoute(
+              builder: (context) => const HomeScreen(),
+            ),
+          );
         },
         icon: const Icon(Icons.arrow_back_ios_new),
         iconSize: 20,

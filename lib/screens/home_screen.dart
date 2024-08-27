@@ -47,9 +47,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                  const SizedBox(height: 25),
                   const Text(
                     'Salah Fathy',
                     style: TextStyle(
@@ -58,12 +56,10 @@ class HomeScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                  const SizedBox(height: 25),
                   const ListTile(
                     leading: Icon(
-                      Icons.account_circle_outlined,
+                      Icons.person,
                       color: Colors.white,
                     ),
                     title: Text(
@@ -83,7 +79,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const ListTile(
                     leading: Icon(
-                      Icons.account_circle_outlined,
+                      Icons.shopping_bag_outlined,
                       color: Colors.white,
                     ),
                     title: Text(
@@ -103,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const ListTile(
                     leading: Icon(
-                      Icons.no_crash_outlined,
+                      Icons.local_shipping_outlined,
                       color: Colors.white,
                     ),
                     title: Text(
@@ -122,17 +118,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   const Divider(color: Colors.grey, thickness: 2),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                  const SizedBox(height: 25),
                   const ListTile(
                     leading: Icon(
-                      Icons.output_rounded,
-                      color: Colors.white,
+                      Icons.exit_to_app_rounded,
+                      color: Colors.red,
                     ),
                     title: Text(
                       'sign Out',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.red),
                     ),
                   ),
                 ],

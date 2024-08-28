@@ -3,7 +3,7 @@ import 'package:shoes_ecommerce_app/widgets/Best_Sellers_widgets/GenderButton.da
 import 'package:shoes_ecommerce_app/widgets/Best_Sellers_widgets/SizeButton.dart';
 
 class Filter extends StatefulWidget {
-  Filter({super.key});
+  const Filter({super.key});
 
   @override
   State<Filter> createState() => _FilterState();
@@ -28,7 +28,7 @@ class _FilterState extends State<Filter> {
               ),
             ),
             const SizedBox(height: 8),
-            Row(
+            const Row(
               children: [
                 GenderButton(text: 'Men', isSelected: true),
                 GenderButton(text: 'Women'),
@@ -45,7 +45,7 @@ class _FilterState extends State<Filter> {
               ),
             ),
             const SizedBox(height: 8),
-            Wrap(
+            const Wrap(
               spacing: 8,
               children: [
                 SizeButton(text: 'UK 4.4'),

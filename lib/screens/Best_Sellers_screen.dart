@@ -133,7 +133,7 @@ class BestSellersScreen extends StatelessWidget {
           child: IconButton(
             onPressed: () {
               scaffoldKey.currentState!.showBottomSheet(
-                (context) => Filter(),
+                (context) => const Filter(),
               );
             },
             icon: const Icon(Icons.filter_list_alt),
@@ -172,7 +172,7 @@ class CustomSearchDelegate extends SearchDelegate {
     // Clear the query
     return [
       IconButton(
-        icon: Icon(Icons.clear),
+        icon: const Icon(Icons.clear),
         onPressed: () {
           query = '';
         },
@@ -184,7 +184,7 @@ class CustomSearchDelegate extends SearchDelegate {
   Widget buildLeading(BuildContext context) {
     // Back arrow to close search
     return IconButton(
-      icon: Icon(Icons.arrow_back),
+      icon: const Icon(Icons.arrow_back),
       onPressed: () {
         close(context, null);
       },

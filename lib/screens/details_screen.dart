@@ -129,7 +129,7 @@ class DetailsScreen extends StatelessWidget {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ShoppingCartPage(),
+                      builder: (context) => const ShoppingCartPage(),
                     ),
                   );
                 },
@@ -185,7 +185,7 @@ class DetailsScreen extends StatelessWidget {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => ShoppingCartPage(),
+              builder: (context) => const ShoppingCartPage(),
             ),
           );
         },

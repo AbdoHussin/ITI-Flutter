@@ -4,7 +4,7 @@ class SizeButton extends StatelessWidget {
   final String text;
   final bool isSelected;
 
-  SizeButton({required this.text, this.isSelected = false});
+  const SizeButton({super.key, required this.text, this.isSelected = false});
 
   @override
   Widget build(BuildContext context) {

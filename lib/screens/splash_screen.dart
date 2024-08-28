@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shoes_ecommerce_app/screens/onBoarding_screen.dart';
-import 'package:shoes_ecommerce_app/widgets/onBoarding_widgets/OnboardingBody.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

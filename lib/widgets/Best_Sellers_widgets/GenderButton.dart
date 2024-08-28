@@ -4,7 +4,7 @@ class GenderButton extends StatelessWidget {
   final String text;
   final bool isSelected;
 
-  GenderButton({required this.text, this.isSelected = false});
+  const GenderButton({super.key, required this.text, this.isSelected = false});
 
   @override
   Widget build(BuildContext context) {

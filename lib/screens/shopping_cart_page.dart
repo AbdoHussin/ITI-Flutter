@@ -3,6 +3,8 @@ import 'package:shoes_ecommerce_app/screens/Checkout.dart';
 import 'package:shoes_ecommerce_app/screens/home_screen.dart';
 
 class ShoppingCartPage extends StatefulWidget {
+  const ShoppingCartPage({super.key});
+
   @override
   _ShoppingCartPageState createState() => _ShoppingCartPageState();
 }

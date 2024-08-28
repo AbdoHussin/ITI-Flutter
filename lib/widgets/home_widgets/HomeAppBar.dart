@@ -49,7 +49,7 @@ class HomeAppBar extends StatelessWidget {
         IconButton(
           onPressed: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => ShoppingCartPage(),
+              builder: (context) => const ShoppingCartPage(),
             ));
           },
           icon: const Icon(Icons.shopping_bag_outlined),

@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 25),
                   const Text(
-                    'Salah Fathy',
+                    'Abdelrahman Hussein',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 24,

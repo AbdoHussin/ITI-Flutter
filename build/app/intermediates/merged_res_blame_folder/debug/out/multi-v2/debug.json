@@ -400,25 +400,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\Shoes\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,18",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,1107",
-                        "endLines": "11,20",
-                        "endColumns": "12,12",
-                        "endOffsets": "758,1273"
-                    },
-                    "to": {
-                        "startLines": "155,163",
-                        "startColumns": "4,4",
-                        "startOffsets": "7894,8346",
-                        "endLines": "162,165",
-                        "endColumns": "12,12",
-                        "endOffsets": "8341,8510"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Aboosa\\.gradle\\caches\\transforms-3\\d47b1192960df52846144d82ac9e1d6f\\transformed\\jetified-window-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,9,17,25,37,43,49,50,51,52,53,54,55,61,66,74,89",
@@ -452,6 +433,25 @@
                         "startOffsets": "6888",
                         "endColumns": "42",
                         "endOffsets": "6926"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\ITI-Project\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,1107",
+                        "endLines": "11,20",
+                        "endColumns": "12,12",
+                        "endOffsets": "758,1273"
+                    },
+                    "to": {
+                        "startLines": "155,163",
+                        "startColumns": "4,4",
+                        "startOffsets": "7894,8346",
+                        "endLines": "162,165",
+                        "endColumns": "12,12",
+                        "endOffsets": "8341,8510"
                     }
                 },
                 {
@@ -605,7 +605,7 @@
             "outputFile": "com.example.shoes_ecommerce_app-merged_res-29:/values-night-v31_values-night-v31.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\Shoes\\android\\app\\src\\main\\res\\values-night-v31\\styles.xml",
+                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\ITI-Project\\android\\app\\src\\main\\res\\values-night-v31\\styles.xml",
                     "from": {
                         "startLines": "3,15",
                         "startColumns": "4,4",
@@ -735,7 +735,7 @@
             "outputFile": "com.example.shoes_ecommerce_app-merged_res-29:/values-v31_values-v31.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\Shoes\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
+                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\ITI-Project\\android\\app\\src\\main\\res\\values-v31\\styles.xml",
                     "from": {
                         "startLines": "3,15",
                         "startColumns": "4,4",
@@ -759,7 +759,7 @@
             "outputFile": "com.example.shoes_ecommerce_app-merged_res-29:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\Shoes\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\Aboosa\\Desktop\\ITI\\ITI-Project\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,18",
                         "startColumns": "4,4",

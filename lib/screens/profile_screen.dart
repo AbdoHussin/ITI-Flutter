@@ -78,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Center(
               child: Text(
-                'Salah Fathy',
+                'Abdelrahman Hussien',
                 style: TextStyle(
                   color: Color(0xff1A2530),
                   fontSize: 24,
@@ -88,10 +88,10 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             _buildLabel('Full Name'),
-            _buildTextField('Salah Fathy'),
+            _buildTextField('Abdelrahman Hussein'),
             const SizedBox(height: 20),
             _buildLabel('Email Address'),
-            _buildTextField('salahfathy@example.com'),
+            _buildTextField('Abdelrahman Hussein@example.com'),
             const SizedBox(height: 20),
             _buildLabel('Password'),
             _buildTextField('**********', isPassword: true),
